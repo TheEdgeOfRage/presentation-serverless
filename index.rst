@@ -15,8 +15,6 @@ What does serverless mean?
 AWS Compute startup times
 -------------------------
 
-.. Speaker note
-
 .. revealjs_fragments::
 
     * EC2 - minutes
@@ -112,12 +110,19 @@ Triggering events
               rules:
                 - suffix: .mkv
 
-Infrastructure is hard
-----------------------
+Other serverless goodies
+------------------------
 
-* CloudFormation bad
-* Terraform good
-* Multiple environments are harder
+* Automatic IAM roles
+* Easy additional permissions
+* Lots of functionality for little code
+
+Other serverless badies
+-----------------------
+
+* CloudFormation bad, Terraform good
+* Multiple environments are harder to implement
+* Hardcoding and code duplication
 
 Messaging pipeline
 ==================
@@ -147,3 +152,10 @@ More triggers and destinations
                   - request_cleaning
     destinations:
       onSuccess: arn:aws:events:::event-bus/default
+
+EventBridge - Central point of success
+--------------------------------------
+
+* Arbitrary event routing and scheduling
+* All services produce events
+* Cheap af (even free if used correctly)
