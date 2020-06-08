@@ -1,0 +1,24 @@
+---
+kind: pipeline
+type: docker
+name: presentation-deploy
+
+image_pull_secrets:
+  - docker_credentials
+
+steps:
+  - name: build
+    image: hub.theedgeofrage.com/revealjs-builder
+
+  - name: deploy
+    image: plugins/s3
+    settings:
+      access_key:
+        from_secret: aws_access_key_id
+      secret_key:
+        from_secret: aws_secret_access_key
+      bucket: pavle-presentations
+      source: _build/revealjs/**/*
+      target: /serverless
+      path_style: true
+      endpoint: https://minio.theedgeofrage.com
