@@ -19,6 +19,7 @@ steps:
         from_secret: aws_secret_access_key
       bucket: pavle-presentations
       source: _build/revealjs/**/*
+      strip_prefix: _build/revealjs/
       target: /serverless
       path_style: true
       endpoint: https://minio.theedgeofrage.com
