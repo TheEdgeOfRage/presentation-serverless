@@ -2,7 +2,7 @@
 Serverless real time video processing
 =====================================
 
-Powered by the Cloud, AI, events, and other buzzwords
+Powered by the Cloud, AI, Microservices, and other buzzwords
 
 The Serverless hype
 ===================
@@ -158,4 +158,4 @@ EventBridge - Central point of success
 
 * Arbitrary event routing and scheduling
 * All services produce events
-* Cheap af (even free if used correctly)
+* Cheap af (probably even free)
