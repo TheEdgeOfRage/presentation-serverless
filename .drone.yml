@@ -3,12 +3,9 @@ kind: pipeline
 type: docker
 name: presentation-deploy
 
-image_pull_secrets:
-  - docker_credentials
-
 steps:
   - name: build
-    image: hub.theedgeofrage.com/revealjs-builder
+    image: theedgeofrage/sphinx-revealjs-builder
 
   - name: deploy
     image: plugins/s3
