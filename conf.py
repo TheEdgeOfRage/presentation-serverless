@@ -35,7 +35,6 @@ revealjs_script_conf = '''
 		history: true,
 		center: true,
 		transition: "slide",
-		showNotes: true,
 	}
 '''
 revealjs_script_plugins = [
